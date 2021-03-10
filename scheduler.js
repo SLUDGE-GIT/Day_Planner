@@ -7,19 +7,19 @@
 // saves user input into local storage
 // uhhhhh think thats it tbh...
 
-// window.onload = function (){
+window.onload = function (){
 
-//     let today = new Date();
-//     let date = moment().format('LL');
-//     #('#currentDay').html(date);
+    let today = new Date();
+    let date = moment().format('LL');
+    #('#currentDay').html(date);
 
-// }
+}
 
 // // set up the schedule from 9-5
-// let scheduleHours = ['9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM'];
-// let $container = $('.container');
+let scheduleHours = ['9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM'];
+let $container = $('.container');
 
-
+    
 
 
 
