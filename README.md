@@ -8,7 +8,7 @@ also the user's data that they enter; upon hitting the save icon to the right of
 
 github pages - https://sludge-git.github.io/Day_Planner/
 
-github repo - 
+github repo -  https://github.com/SLUDGE-GIT/Day_Planner
 
 
 
