@@ -6,8 +6,9 @@ the scheduler's text area will switch background colors dependant on the current
 also the user's data that they enter; upon hitting the save icon to the right of the textarea will save the data into the local storage.
 
 
-live website - https://sludge-git.github.io/Day_Planner/
-github  -
+github pages - https://sludge-git.github.io/Day_Planner/
+
+github repo - 
 
 
 
