@@ -53,89 +53,31 @@ let $container = $('.container');
      });
 
 
-    //  // should change bg color dependant on time of day
-    //  function changeColor(){
+     function changeColor() {
         
-    //     let timeNow = new Date().getHours();
+        let hour = moment().hour();
 
-
-    //     // i = the time essentially - we counting in military time so 18 would = 6pm 
-    //     for(let i = 9; i < 18; i++) {
-
-    //         if ($(`#${i}`).data('time') == timeNow){
-
-    //         }
-    //     }
-
+        $('.col2').each(function () {
+            let val = $(this).attr('id');
     
-
-
-
-    //  }
-
-    // setInterval(function() {
-    //     changeColor();
-    // }, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // function colorchanger(now){
-       
-    //     let date = new Date();
-    //     let hours = date.getHours();
-    //     // let mins = date.getMinutes();
-        
-    //     let am = 'AM';
-    //     let pm = 'PM'; 
-    //     let hoursAmPm;
-
-    //     //add am or pm to time
-    //     // if(hours > 12){
-    //     //     hoursAmPm = pm;
-    //     // } else{
-    //     //     hoursAmPm = am;
-    //     // }
-
-    //     // hours = hours % 12;
-        
-    //     // // sanity check  -- if hours is true then do nothing - if false set hours to 12;
-    //     // if(hours){
-    //     //     // hours = hours;
-    //     // } else {
-    //     //     hours = 12;
-    //     // }
-  
-
-        
-    //     // color changer ---- maybe do all this in its own function  - for now i just want it all to work D:<
-    //     // im so stupid theres 'past' 'present' 'future' that has colors set for these already
-       
-       
-       
-       
-       
-       
-   
-
-
-
-
-    // }
-
-
+            if (val > hour) {
+                $(this).addClass("future");
+                $(this).removeClass("present");
+                $(this).removeClass("past");
     
+            } else if (val == hour) {
+                $(this).removeClass("future");
+                $(this).addClass("present");
+                $(this).removeClass("past");
+    
+            } else if (val < hour) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+        })
+    }
+
+    setInterval(function() {
+        changeColor();
+    }, 1000);
